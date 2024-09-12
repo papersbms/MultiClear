@@ -10,7 +10,6 @@ def main():
     config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
     config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 
-    # Start streaming
     pipeline.start(config)
 
     # TCP socket setup
@@ -28,17 +27,14 @@ def main():
             if not depth_frame or not color_frame:
                 continue
 
-            # Convert images to numpy arrays
             depth_image = np.asanyarray(depth_frame.get_data())
             color_image = np.asanyarray(color_frame.get_data())
 
-            # Serialize and send depth image
             depth_bytes = depth_image.tobytes()
             depth_header = struct.pack('>I', len(depth_bytes))
             sock.sendall(depth_header)
             sock.sendall(depth_bytes)
 
-            # Serialize and send color image
             color_bytes = color_image.tobytes()
             color_header = struct.pack('>I', len(color_bytes))
             sock.sendall(color_header)
