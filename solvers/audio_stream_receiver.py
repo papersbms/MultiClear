@@ -6,8 +6,8 @@ import pyaudio
 model = vosk.Model(model_path="")
 rec = vosk.KaldiRecognizer(model, 44100)
 
-TCP_IP = "0.0.0.0"
-TCP_PORT = 5005
+TCP_IP = ""
+TCP_PORT = 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((TCP_IP, TCP_PORT))
