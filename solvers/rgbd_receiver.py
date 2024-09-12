@@ -9,17 +9,17 @@ from torchvision.transforms.functional import normalize
 from models.isnet import ISNetDIS
 
 # Replace with your ESP32's MAC address and the correct UUID for the GATT characteristic
-ESP32_MAC_ADDRESS = "E4:65:B8:0B:FA:86"
-CHARACTERISTIC_UUID = "abcdef01-1234-5678-1234-56789abcdef0"
+ESP32_MAC_ADDRESS = ""
+CHARACTERISTIC_UUID = ""
 
 # WiFi server configuration (adjust IP and port as needed)
-SERVER_IP = '0.0.0.0'
-SERVER_PORT = 8000
+SERVER_IP = ''
+SERVER_PORT = 
 
 # Number of frames to trigger Bluetooth sending
 FRAMES_BEFORE_TRIGGER = 3
 
-model_path = "D:/Codes/VHR-GP00/models/isnet-general-use.pth"
+model_path = ""
 input_size = [1024, 1024]
 
 net = ISNetDIS()
