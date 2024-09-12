@@ -7,8 +7,8 @@ pip3 install -r requirements.txt
 
 2. Clone the repository using the command:
 ```python
-git clone https://github.com/ThroneHU/tagCap
-cd tagCap
+git clone https://github.com/papersbms/MultiClear.git
+cd MultiClear
 ```
 
 3. Deploy *'esp32/*'* to an ESP32 board
